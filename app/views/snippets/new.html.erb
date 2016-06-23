@@ -1,15 +1,15 @@
 <%= form_for @snippet do |f| %>
 <div>
   <%= f.label :title %>
-  <%= f.text :title  %>
+  <%= f.text_field :title  %>
 </div>
 <div>
   <%= f.label :body %>
-  <%= f.text_field :body  %>
+  <%= f.text_area :body  %>
 </div>
 <div>
   <%= f.label :language %>
-  <%= f.text_field :language %>
+  <%= f.text_area :language %>
 </div>
 <div>
   <%= f.submit %>
