@@ -1,0 +1,17 @@
+<%= form_for @snippet do |f| %>
+<div>
+  <%= f.label :title %>
+  <%= f.text :title  %>
+</div>
+<div>
+  <%= f.label :body %>
+  <%= f.text_field :body  %>
+</div>
+<div>
+  <%= f.label :language %>
+  <%= f.text_field :language %>
+</div>
+<div>
+  <%= f.submit %>
+</div>
+<% end %>

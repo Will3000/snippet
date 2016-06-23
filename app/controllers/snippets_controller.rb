@@ -1,0 +1,15 @@
+class SnippetsController < ApplicationController
+  def new
+    @snippet = Snippet.new
+  end
+
+  def create
+    snippet_params = params.require[:snippet].permit(:title, :body)
+    @snippet = Snippet.new snippet_params
+    if @snippet.save
+      redirect_to snippet_path, notice: "Snippet Created"
+    else
+      redirect_to new_snippet_path, alert: "Failed to Create Snippet!"
+    end
+  end
+end
