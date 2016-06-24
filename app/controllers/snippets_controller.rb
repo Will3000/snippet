@@ -1,4 +1,5 @@
 class SnippetsController < ApplicationController
+  before_action :find_snippet, only: [:show, :edit, :update, :destroy]
   def new
     @snippet = Snippet.new
   end
@@ -6,7 +7,7 @@ class SnippetsController < ApplicationController
   def create
     @snippet = Snippet.new snippet_params
     if @snippet.save
-      redirect_to snippet_path, notice: "Snippet Created"
+      redirect_to snippet_path(@snippet), notice: "Snippet Created"
     else
       redirect_to new_snippet_path, alert: "Failed to Create Snippet!"
     end
@@ -17,10 +18,31 @@ class SnippetsController < ApplicationController
   end
 
   def show
-    @snippet = Snippet.find params[:id]
+  end
+
+  def edit
+  end
+
+  def update
+    if @snippet.update snippet_params
+      redirect_to snippet_path(@snippet), notice: "Update Successfully"
+    else
+      flash[:alert] = "Failed to Update"
+      render :edit
+    end
+  end
+
+  def destroy
+    @snippet.destroy
+    redirect_to root_path, notice: "Snippet Deleted"
   end
 
   private
+
+  def find_snippet
+    @snippet = Snippet.find params[:id]
+  end
+
   def snippet_params
     params.require(:snippet).permit(:title, :body)
   end
