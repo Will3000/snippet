@@ -12,6 +12,10 @@ class SnippetsController < ApplicationController
     end
   end
 
+  def index
+    @snippets = Snippet.all
+  end
+
   private
   def snippet_params
     params.require[:snippet].permit(:title, :body, :language)
