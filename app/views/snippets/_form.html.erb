@@ -1,7 +1,6 @@
 <%= form_for @snippet do |f| %>
   <div>
-    <%= f.label :language %>
-    <%= f.text_field :language %>
+    <%= f.collection_select :language_id, Language.order(:name), :id, :name %>
   </div>
   <div>
     <%= f.label :title %>

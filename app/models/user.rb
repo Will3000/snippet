@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  has_many :snippets, dependant: :destroy
+  has_many :snippets, dependent: :destroy
 end
