@@ -16,6 +16,10 @@ class SnippetsController < ApplicationController
     @snippets = Snippet.all
   end
 
+  def show
+    @snippet = Snippet.find params[:id]
+  end
+
   private
   def snippet_params
     params.require(:snippet).permit(:title, :body)

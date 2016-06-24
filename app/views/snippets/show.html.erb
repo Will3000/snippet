@@ -1,0 +1,8 @@
+<h1>Title: </h1>
+  <%= @snippet.title %>
+<h1>Body: </h1>
+  <%= @snippet.body %>
+<%= link_to "Edit", edit_snippet_path(@snippet)%>
+<%= link_to "Delete", sinppet_path(@snippet),
+                      method: :delete,
+                      data: {confirm: "Are you sure"}%>
