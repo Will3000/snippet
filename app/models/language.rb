@@ -1,5 +1,6 @@
 class Language < ActiveRecord::Base
   has_many :snippets, dependent: :nullify
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, uniqueness: true, presence: true
+
 end
