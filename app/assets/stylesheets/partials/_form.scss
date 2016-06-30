@@ -1,0 +1,50 @@
+/* ---- FORM STYLES ---- */
+label {
+	display: none;
+}
+
+input[type="text"] {
+	font-family: $font-base;
+	font-size: 30px;
+	font-weight: $normal;
+	color: $blue;
+
+	display: block;
+	width: 100%;
+	padding: 5px 10px;
+	margin: 20px 0;
+	border: none;
+	border-bottom: solid 1px $blue;
+}
+
+textarea {
+	
+}
+
+input:focus {
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+   color: $blue;
+   font-weight: $el;
+   font-style: italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $blue; 
+   font-weight: $el; 
+   font-style: italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $blue;
+   font-weight: $el;
+   font-style: italic;
+}
+
+:-ms-input-placeholder {  
+   color: $blue;
+   font-weight: $el;
+   font-style: italic;
+}

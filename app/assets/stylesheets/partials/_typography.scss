@@ -1,0 +1,13 @@
+/* ---- Typography Styles ---- */
+
+@import url(https://fonts.googleapis.com/css?family=Assistant:400,200,300,600,700,800);
+
+/* General Typo Styles */
+html {
+	@include font-smoothing();
+}
+
+/* Typo Styles */
+h1, h2, h3, h4, h5, h6, p, li, a, label {
+	font-family: $font-base;
+}

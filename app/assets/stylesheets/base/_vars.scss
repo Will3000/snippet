@@ -1,0 +1,16 @@
+/* ---- VARIABLES & MIXINS LIBRARY ---- */
+$font-base: 'Assistant', sans-serif;
+
+$el: 200;
+$light: 300;
+$normal: 400;
+$semibold: 600;
+$bold: 700;
+$eb: 800;
+
+//MIXINS
+@mixin font-smoothing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}

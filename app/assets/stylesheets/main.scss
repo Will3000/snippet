@@ -2,3 +2,11 @@
 @import "bootstrap";
 
 // Custom styles
+@import 'base/vars';
+@import 'base/colors';
+
+@import 'partials/typography';
+@import 'partials/layout';
+@import 'partials/home';
+@import 'partials/nav';
+@import 'partials/form';
