@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   resources :snippets
+  resources :languages, only: [:show]
 
   root "snippets#index"
   # The priority is based upon order of creation: first created -> highest priority.
