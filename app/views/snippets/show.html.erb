@@ -1,7 +1,7 @@
 <h1>Title: </h1>
   <%= @snippet.title %>
 <h1>Body: </h1>
-  <%= @snippet.body %>
+  <%= markdown("~~~~~#{@snippet.language.name.downcase}\n"+@snippet.body+"\n~~~~~") %>
 <%= link_to "Edit", edit_snippet_path(@snippet)%>
 <%= link_to "Delete", snippet_path(@snippet),
                       method: :delete,
