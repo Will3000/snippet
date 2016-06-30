@@ -2,5 +2,6 @@
 
 <% @snippets.each do |s| %>
 	title: <%= s.title %>
-	body: <%= s.body %>
+	<%= markdown("~~~~~#{s.language.name.downcase}\n"+s.body+"\n~~~~~") %>
+	<hr>
 <% end %>
